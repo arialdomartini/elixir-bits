@@ -1,9 +1,9 @@
 -module(geom).
--export([area/0, area/1, area/2]).
+-export([area/3]).
 
-area(Length, Width) ->
-    Length * Width.
-area(Length) ->
-    area(Length,1).
-area() ->
-    area(1,1).
+area(rectangle, Length, Width) ->
+    Length * Width;
+area(ellipse, A, B) ->
+    math:pi() * A * B;
+area(triangle, Base, Height) ->
+    Base * Height / 2.
