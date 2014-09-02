@@ -18,5 +18,9 @@ defmodule Geom do
   def area(_, _, _) do
     0
   end
-  
+
+  @spec area( { atom(), number(), number() } ) :: number()
+  def area({shape, a, b }) do
+    area(shape, a, b)
+  end
 end
