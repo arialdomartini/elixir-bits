@@ -2,7 +2,7 @@ defmodule Geom do
   @vsn 1.1
 
   @spec area(atom(), number(), number()) :: number()
-  def area(shape, a, b) do
+  def area(shape, a, b) when a >= 0 and b >= 0 do
     case shape do
       :rectangle -> a * b
       :triangle  -> a * b /2
